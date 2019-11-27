@@ -1,0 +1,10 @@
+#!/bin/sh
+
+for t in 01 02 03 04 05 06
+do
+	echo === Test $t ===
+	./myed text < tests/$t > out.observed
+	/web/cs2521/19T3/labs/week02/myed text < tests/$t > out.expected
+	diff out.observed out.expected
+done
+rm *.observed *.expected

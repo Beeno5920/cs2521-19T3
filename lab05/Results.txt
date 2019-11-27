@@ -1,0 +1,31 @@
+Results for Tests on 5000 values
+
+Depth = depth of tree, Cost = average #comparisons per search
+
+
+             Ascending Order        Prefix Order        Random Order
+Insert
+Method       Depth      Cost     Depth      Cost     Depth      Cost
+
+L             5000      3115        13        12        28        16
+
+A             5000      1887      2954      1115        28        17
+
+R             2942       952      1774       674        27        16
+
+B              206        63        20        14        23        14
+
+S           5000(i)       24    5000(i)       24     31(i)        23
+              33(s)               29(s)            1149(s)
+
+V               13        12        13        12        15        12
+
+#i = Insert; s = search;
+
+Notes (what the above indicates):
+    The cost has direct relation with the depth of the tree, which means smaller depth causes lower 
+cost, while larger depth causes higher cost.
+    In addition, random order has the lowest cost in general, whereas ascending order has the highest
+cost for all insertion medthods.
+    Finally, we can notice that AVL tree has the best performance among all insertion medthods, as it
+has the lowest cost and depth for all ascending order, prefix order and random order.

@@ -1,0 +1,10 @@
+#!/bin/sh
+max=100
+for i in `seq 1 $max`
+do
+    echo "$i times: "
+    time ./useIntList < tests/19 > out1
+    time sort -n < tests/19 > out2
+done
+echo === done test 19 ===
+rm out1 out2

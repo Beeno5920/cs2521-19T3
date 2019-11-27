@@ -1,0 +1,19 @@
+
+#include "list.h"
+
+void listReverse(List l) {
+	// TODO
+  struct node* curr = l->head;
+  struct node* ptr;
+  struct node* prev = curr;
+  curr = curr->next;
+  ptr = curr->next;
+  while(curr != NULL){
+    curr->next = prev;
+    prev = curr;
+    curr = ptr;
+    if(ptr != NULL)
+      ptr = ptr->next;
+  }
+}
+

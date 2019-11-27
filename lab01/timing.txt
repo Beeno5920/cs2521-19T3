@@ -1,0 +1,34 @@
+Input	Initial	Has	Number	AvgTime	AvgTime
+Size	Order	Dups	of runs	forusel	forsort
+5000	random	no	100	0.133s	0.0060s
+5000	sorted	no	100	0.015s	0.0024s
+5000	reverse	no	100	0.016s	0.0029s
+5000	random	yes	100	0.140s	0.0057s
+5000	sorted	yes	100	0.018s	0.0029s
+5000	reverse	yes	100	0.018s	0.0031s
+10000	random	no	100	0.412s	0.0096s
+10000	sorted	no	100	0.029s	0.0048s
+10000	reverse	no	100	0.034s	0.0060s
+10000	random	yes	100	0.415s	0.0089s
+10000	sorted	yes	100	0.034s	0.0055s
+10000	reverse	yes	100	0.031s	0.0058s
+20000	random	no  	100	1.834s  0.0176s
+20000	sorted	no  	100	0.052s  0.0096s
+20000	reverse	no  	100 	0.052s  0.0108s
+20000	random	yes 	100	1.840s	0.0179s
+20000	sorted	yes 	100	0.052s	0.0096s
+20000	reverse	yes 	100	0.051s	0.0107s
+50000	random 	no	100	12.98s	0.0467s
+50000	sorted	no	100	0.104s	0.0226s
+50000	reverse	no	100	0.106s	0.0265s
+50000	random 	yes	100	12.97s	0.0457s
+50000	sorted	yes	100	0.102s	0.0219s
+50000	reverse	yes	100	0.101s	0.0259s
+
+/*
+	According to the records above, we could tell that the average time for the "sort" command is super linear (near 0.00s in all the cases above) in any input size cases mentioned above. The "useIntList" programme, however, generally uses more time than the "sort" command. This could be explained by the data structure used in the programme to store the data. Singly-linked linked list with a tail pointer is used as the data structure in this case, that means the time used to search a node on this kind of data structure is linear, proportional to the size of the list  (O(n)).Therefore, whenever a new node needed to be inserted, the programme has to search every node on the list, from its head to its tail, until it finds a correct position to insert the node. As a result, the larger number of data needed to sort, the longer time the programme takes.
+	There is another pattern we can find from the above records, which is that the time used to sort sorted data and reversely-sorted data is much less than that used to sort randomly-placed data. In terms of sorting sorted data, the incoming new value must less than that of the last one on the list. Therefore, the programme just needs to append it to the linked list without doing any searching. In terms of sorting reversely-sorted data, the incoming new value must less than the value of the first node of the liked list. So, the new node will just be inserted into the front of the list, without doing any types of searching as well. As mentioned above, searching a singly-linked linked list is very time consuming when the number of data is enormous. Thereby, those two cases which require no searching consume much less time.
+	Moreover, the record also tell us the time used to sort a branch of data does not depend on the proportion of duplicate values. It is because this duplicate values would not affect the time of comparing values a lot.
+	In conculsion, the time used by "useIntList" programme to sort data is always longer than just using "sort" command. It is unwise to use the program to sort data when it comes to more than 50000 data, because it takes more than 10 seconds to sort while "sort" command only takes alomst 0 seconds.
+*/
+
