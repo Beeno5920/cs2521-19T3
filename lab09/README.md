@@ -16,12 +16,12 @@
   </header>
 <center><table border='0'>
 <tr>
-<td> <img align='center' width="130px" src='Pics/map.png'> </td>
+<td> <img align='center' width="130px" src='https://cgi.cse.unsw.edu.au/~cs2521/19t3/labs/week09/Pics/map.png'> </td>
 <td> &nbsp; &nbsp; &nbsp; &nbsp; </td>
 <td align='center'> <span style='font-size:22pt'>Map of Victorian Europe</span>
 </td>
 <td> &nbsp; &nbsp; &nbsp; &nbsp; </td>
-<td> <img align='center' width="130px" src='Pics/map.png'> </td>
+<td> <img align='center' width="130px" src='https://cgi.cse.unsw.edu.au/~cs2521/19t3/labs/week09/Pics/map.png'> </td>
 </tr></table>
 </center>
 
